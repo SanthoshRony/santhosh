@@ -1,15 +1,10 @@
 
 body{
   background-color:#004d1a;
-  margin-top: 80px;
-  margin-left: 25px;
+  margin-top: 200px;
   text-align: center;
   font-family: arial sans-serif;
   background-repeat: no-repeat;
-  border-radius: 25px;
-  border: 2px solid white;
-  width: 90%;
-  height: 600px;
 
 
 }
@@ -61,12 +56,5 @@ p{
   padding-top: 10px;
   padding-bottom: 10px;
   font-weight: 550;
-
-}
-@media (min-width:900px) {
-
-  body{
-    margin-left: 80px;
-  }
 
 }
