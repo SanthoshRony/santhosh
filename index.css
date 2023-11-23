@@ -58,3 +58,11 @@ p{
   font-weight: 550;
 
 }
+
+@media (max-width:600px) {
+  body{
+    margin-top: 300px;
+  }
+
+}
+
