@@ -10,6 +10,7 @@ body{
   height: 700px;
   background-position: center;
   overflow-y: hidden;
+  background-repeat: no-repeat;
 }
 h1{
   color:goldenrod;
