@@ -1,65 +1,72 @@
-body {
-  background-color: #004d1a;
-  margin-top: 10px;
-  margin-left: 10px;
+
+body{
+  background-color:#004d1a;
+  margin-top: 80px;
+  margin-left: 25px;
   text-align: center;
   font-family: arial sans-serif;
   background-repeat: no-repeat;
   border-radius: 25px;
   border: 2px solid white;
   width: 90%;
-  height: auto;
+  height: 600px;
+
+
+}
+h1{
+  color:goldenrod;
+  font-size: 50px;
+
 }
 
-h1 {
-  color: goldenrod;
-  font-size: 30px;
+p{
+  color : white;
+  font-size: 22px;
 }
-
-p {
-  color: white;
-  font-size: 18px;
-}
-
-#player-el {
+#player-el{
   padding-top: 15px;
 }
-
-#message {
-  font-style: italic;
+#message{
+  font-style:italic;
 }
-
-.game,
-.card,
-#rbutton {
-  color: #006622;
-  width: 120px;
-  background: goldenrod;
-  border: none;
-  border-radius: 2px;
+.game{
+  color:#006622;
+  width:150px;
+  background:goldenrod;
+  border:none;
+  border-radius : 2px;
   padding-top: 10px;
   padding-bottom: 10px;
   font-weight: 550;
-  margin-top: 10px;
 }
+.card{
+  margin-top: 20px;
+  color:#016f32;
+  width:150px;
+  background:goldenrod;
+  border:none;
+  border-radius : 2px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 550;
+}
+#rbutton{
 
-@media (min-width: 600px) {
-  body {
-    margin-left: 20px;
-    width: 80%;
+  margin-top: 20px;
+  color:#016f32;
+  width:150px;
+  background:goldenrod;
+  border:none;
+  border-radius : 2px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 550;
+
+}
+@media (min-width:900px) {
+
+  body{
+    margin-left: 80px;
   }
 
-  h1 {
-    font-size: 40px;
-  }
-
-  p {
-    font-size: 20px;
-  }
-
-  .game,
-  .card,
-  #rbutton {
-    width: 150px;
-  }
 }
