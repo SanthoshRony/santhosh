@@ -38,7 +38,7 @@ section{
 }
 h1{
   text-align: center;
-  margin-top: 200px;
+  margin-top: 300px;
   font-size: 40px;
   font-family: 'Dancing Script', cursive;
   text-transform: uppercase;
@@ -87,8 +87,7 @@ section button:hover{
 
 @media (max-width:1200px) {
     html{
-      background-image: linear-gradient(to right, rgba(245, 246, 252, 0.52), rgba(0, 0,255, 0.35)),
-        url('pic9.png');
+      background-image: linear-gradient(to right, rgba(245, 246, 252, 0.52), rgba(0, 0,255, 0.35));
       background-size:170%;
       background-position: center;
     }
