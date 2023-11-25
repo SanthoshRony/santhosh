@@ -1,0 +1,150 @@
+html{
+  font-family:bold;
+  box-sizing:border-box;
+
+
+}
+body{
+  background-image: linear-gradient(to right, #b3ecff,white,#b3ecff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+
+}
+.beauty{
+  background-color: white;
+  padding: 15px 25px;
+  width:100%;
+  max-width: 900px;
+  border:2px solid white;
+  border-radius: 50px;
+  display:flex;
+  flex-direction:column;
+  text-align: center;
+  text-transform: uppercase;
+  height :auto;
+}
+ul{
+  list-style-type: none;
+}
+.beauty-style{
+   border-bottom:1px solid #e1f1ff;
+
+}
+
+.beauty-style:last-child{
+   border-bottom:none;
+}
+.beauty-img{
+  margin-bottom:20px;
+  max-width: 100%;
+}
+.beauty-header{
+  color: #888;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.beauty-features{
+  margin:25px 0 25px;
+  color:#60a9ff;
+}
+
+.beauty-header-item{
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height:1.5;
+  font-size: 15px;
+  padding:15px 0;
+  border-top: 1px solid #e1f1ff;
+
+}
+
+.beauty-header-item:last-child{
+
+  border-bottom: 1px solid #e1f1ff;
+}
+button{
+  color:#60a9ff;
+  background-color: white;
+  border: 1px solid #60a9ff;
+  margin-bottom: 20px;
+  font-weight:400;
+  border-radius: 3px;
+  height: 30px;
+}
+button:hover{
+  background-color: #e6f3ff;
+}
+.san button{
+  color:white;
+  background-color: #48aaff;
+}
+.san button:hover{
+  background-color:#e6f3ff;
+  color:#48aaff;
+}
+
+
+@media (min-width:900px) {
+  .beauty-style{
+
+     padding:0px 250px;
+  }
+
+}
+@media (max-width:900px) {
+
+  .beauty{
+    margin-right: -1px;
+
+  }
+
+}
+.fa{
+ padding: 20px;
+ font-size: 20px;
+ font-weight: 500;
+ width: 30px;
+ text-align: center;
+ text-decoration: none;
+ margin: 5px 2px;
+ border-radius:50%;
+ border:2px solid black;
+ margin-left: 70px;
+ margin-top: 25px;
+
+}
+.fa-facebook{
+  margin-left: 10px;
+  background-color: white;
+  color: #60a9ff;
+  border-color: #e1f1ff;
+
+}
+.fa-facebook:hover{
+  background-color: #60a9ff;
+  color:white;
+
+}
+.fa-instagram{
+  background-color: white;
+  color:  magenta;
+  border-color: #e1f1ff;
+}
+
+.fa-instagram:hover{
+  background-color:white;
+  color:#000000;
+}
+
+.fa-twitter{
+  background-color: white;
+  color: #60a9ff;
+  border-color: #e1f1ff;
+}
+.fa-twitter:hover{
+  background-color: #60a9ff;
+  color:white;
+}

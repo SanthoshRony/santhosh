@@ -1,0 +1,19 @@
+img{
+  width:502px;
+  margin:10px;
+}
+nav{
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Itim', cursive;
+  font-size: 25px;
+  font-weight: 300;
+  text-shadow: 2px 2px grey;
+}
+@media (max-width:900px) {
+    img{
+      width:400px;
+      margin-left:26px;
+    }
+
+}

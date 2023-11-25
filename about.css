@@ -1,0 +1,36 @@
+html{
+  font-family: 'Gentium Book Plus', serif;
+   background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0));
+  color:white;
+
+}
+h1{
+  text-align: center;
+  text-transform: uppercase;
+}
+hr{
+  border: 1.7px solid white;
+  border-radius: 2px;
+}
+
+.san{
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  text-shadow:2px,grey;
+  text-transform: uppercase;
+  letter-spacing:normal;
+  line-height: normal;
+
+
+}
+nav{
+  margin-top: 150px;
+  margin
+
+}
+.san:hover{
+  text-decoration: underline;
+
+}
