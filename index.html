@@ -1,21 +1,41 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Blackjack</title>
-    <link rel="stylesheet" href="index.css">
-  </head>
-  <body>
-    <h1>🃏 Blackjack 🃏</h1>
-    <p id = "message-el">Want to play a round ?</p>
-    <p id = "cards-el">Cards : </p>
-    <p id = "sum-el">Sum : </p>
-    <button class = "game" onclick = "startgame()">START GAME</button>
-    <br>
-    <button class = "card" onclick = "newcard()">NEW CARD</button>
-    <br>
-    <button id="rbutton" onclick="refresh()" >REFRESH</button>
-    <p id = "player-el"></p>
-   <script type="text/javascript" src = "index.js"></script>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+
+    <div id = "calculator">
+      <p id = "sum"></p>
+
+      <input  id="display" readonly>
+      <div id = "keys">
+
+        <button onclick="addtodisplay('+')" id="btn">+</button>
+        <button onclick="addtodisplay('7')">7</button>
+        <button onclick="addtodisplay('8')">8</button>
+        <button onclick="addtodisplay('9')">9</button>
+        <button onclick="addtodisplay('-')" id="btn">-</button>
+        <button onclick="addtodisplay('4')">4</button>
+        <button onclick="addtodisplay('5')">5</button>
+        <button onclick="addtodisplay('6')">6</button>
+        <button onclick="addtodisplay('*')" id="btn">x</button>
+        <button onclick="addtodisplay('1')">1</button>
+        <button onclick="addtodisplay('2')">2</button>
+        <button onclick="addtodisplay('3')">3</button>
+        <button onclick="addtodisplay('/')" id="btn">/</button>
+        <button onclick="addtodisplay('0')">0</button>
+        <button onclick="addtodisplay('.')">.</button>
+        <button onclick="calculate()">=</button>
+        <button onclick="addtodisplay('%')" id="btn">%</button>
+        <button onclick="addtodisplay('00')" id="btn">00</button>
+        <button onclick="singleclear()" id="btn">C</button>
+        <button onclick="Clear()" id="btn">AC</button>
+
+      </div>
+    </div>
+<script src="calculator.js"></script>
+</body>
 </html>
