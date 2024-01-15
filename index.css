@@ -1,58 +1,63 @@
 body{
-  background-color:#004d1a;
-  margin-top: 200px;
-  text-align: center;
-  font-family: arial sans-serif;
-  background-repeat: no-repeat;
+    margin: 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+
 
 }
-h1{
-  color:goldenrod;
-  font-size: 50px;
+#calculator{
+    max-width: 500px;
+    background-color:#262626;
+    overflow: hidden;
+    height: 460px;
+    text-align: center;
+    border-radius: 15px;
+    height: 67.5%
 
 }
+#display{
+    width: 100%;
+    padding:   20px;
+    text-align: right;
+    color:white;
+    background-color:#262626;
+    border: none;
+    font-size: 25px;
 
+
+
+}
+#keys{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    padding: 30px;
+
+
+}
+button{
+    color:white;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 25px;
+    background-color: grey;
+    border:none;
+    cursor : pointer;
+
+}
+#btn{
+    background-color:#ffad33;
+}
 p{
   color : white;
-  font-size: 22px;
-}
-#player-el{
-  padding-top: 15px;
-}
-#message{
-  font-style:italic;
-}
-.game{
-  color:#006622;
-  width:150px;
-  background:goldenrod;
-  border:none;
-  border-radius : 2px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-weight: 550;
-}
-.card{
-  margin-top: 20px;
-  color:#016f32;
-  width:150px;
-  background:goldenrod;
-  border:none;
-  border-radius : 2px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-weight: 550;
-}
-#rbutton{
-
-  margin-top: 20px;
-  color:#016f32;
-  width:150px;
-  background:goldenrod;
-  border:none;
-  border-radius : 2px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-weight: 550;
+  text-align: left;
+  padding-left: 20px;
+  font-size: 20px;
+  height: 20px;
 
 }
