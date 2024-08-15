@@ -1,0 +1,465 @@
+
+html, body {
+  height: 100%; /* Ensure full height */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  font-family: "Josefin Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+html, body {
+  height: 100%; /* Ensure full height */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+/* Styling for the .car section */
+.car {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  height: 100vh; /* Full viewport height */
+  background-image: url('/static/img/car2.jpg');
+  background-size: cover; /* Ensure the image covers the viewport */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repeating the image */
+  overflow: hidden; /* Prevent extra space from affecting layout */
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .car {
+      background-image: url('/static/img/car1.jpg'); /* Optionally switch to a mobile-specific image */
+      background-size: cover; /* Ensure the image covers the viewport */
+      background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Prevent repeating the image */
+  }
+}
+
+
+
+
+/* navbar*/
+
+
+.navbar {
+  background-color: #f2f2f2;
+  overflow: hidden;
+  position: fixed;
+  width:100%;
+  z-index: 1000;
+
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+}
+
+.brand-logo {
+
+text-decoration: none;
+font-size: 24px;
+color: 	black;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 24px;
+
+  cursor: pointer;
+}
+
+.menu-icon:hover{
+
+  color:  #999999;
+  transition: color 0.3s;
+
+}
+
+.menu {
+  display: flex;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+
+}
+
+.nav-links li {
+  margin: 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color:  #999999;
+}
+
+
+
+/* Responsive layout for mobile */
+@media screen and (max-width: 600px) {
+  .brand-logo {
+      display: block; /* Ensure the brand logo is visible */
+  }
+  .nav-links {
+      display: none; /* Hide the navigation links */
+  }
+  .menu-icon {
+      display: block; /* Show the menu icon */
+      position: absolute; /* Position it absolutely within its parent */
+      right: 0;
+
+  }
+
+}
+
+
+
+
+
+@media screen and (max-width: 600px) {
+.topnav a:not(:first-child) {
+  display: none;
+}
+.topnav a.icon {
+  float: right;
+  display: none;
+}
+}
+
+
+
+/* menu bar page starts here */
+
+
+#menuOverlay {
+height: 100%;
+width: 0;
+position: fixed;
+z-index: 1000;
+top: 0;
+left: 0;
+background-color: black;
+overflow-x: hidden;
+transition: 0.2s;
+}
+
+#menuOverlay .menu-content {
+position: relative;
+top: 50%;
+transform: translateY(-50%);
+width: 100%;
+text-align: center;
+}
+
+#menuOverlay .menu-content a {
+display: block;
+padding: 25px;
+color: white;
+font-size: 33px;
+text-decoration: none;
+}
+
+#menuOverlay .menu-content a:hover {
+color:  #999999;
+}
+
+#menuOverlay .closebtn {
+position: absolute;
+top: 20px;
+right: 45px;
+font-size: 36px;
+cursor: pointer;
+color: white;
+}
+
+#menuOverlay .closebtn:hover {
+color:  #999999;
+}
+
+/* Responsive adjustments for smaller devices */
+@media screen and (max-width: 768px) {
+#menuOverlay .menu-content a {
+  padding: 20px;
+  font-size: 28px;
+}
+
+#menuOverlay .closebtn {
+  top: 15px;
+  right: 35px;
+  font-size: 30px;
+}
+}
+
+@media screen and (max-width: 600px) {
+#menuOverlay .menu-content a {
+  padding: 15px;
+  font-size: 24px;
+}
+
+#menuOverlay .closebtn {
+  top: 10px;
+  right: 25px;
+  font-size: 26px;
+}
+}
+
+
+
+
+.home{
+margin-top: 200px;
+color: white;
+}
+
+.blurred-text {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 40px;
+  margin-bottom: -10px;
+
+}
+p{
+display: flex;
+justify-content: center;
+text-align: center;
+text-transform: capitalize;
+}
+
+
+
+
+/* services */
+
+.desc-h1{
+display: flex;
+justify-content: center;
+text-transform: uppercase;
+margin-top: 40px;
+font-size: 30px;
+
+}
+
+.descc{
+display: flex;
+justify-content: center;
+text-transform: inherit;
+margin-left: 50px;
+margin-right: 50px;
+margin-bottom: 15px;
+font-size: 22px;
+
+}
+.some{
+margin-top: 20px;
+margin-bottom: 40px;
+}
+
+.desc{
+display: flex;
+justify-content: center;
+margin-left: 60px;
+margin-right: 30px;
+
+
+}
+
+
+.swiper {
+width: 100%;
+height: 100%;
+margin-bottom: 50px;
+}
+
+.swiper-slide {
+text-align: center;
+
+}
+
+/* Swiper Navigation Arrows */
+.swiper-button-next{
+color: black;
+}
+.swiper-button-prev{
+color: black;
+}
+.swiper-pagination{
+color:black;
+}
+
+.card1 {
+width: 600px;
+height: 580px;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+margin: 0 auto;
+margin-bottom: 50px;
+opacity: 0.4px;
+}
+
+
+#a{
+background: url('/static/img/1.jpg') no-repeat center center;
+background-size: cover; /* This ensures the image covers the entire slide */
+display: flex;
+align-items: center; /* Center content vertically if needed */
+justify-content: center;
+
+}
+#b{
+background: url('/static/img/2.jpg') no-repeat center center;
+background-size: cover; /* This ensures the image covers the entire slide */
+display: flex;
+align-items: center; /* Center content vertically if needed */
+justify-content: center;
+}
+#c{
+background: url('/static/img/3.jpg') no-repeat center center;
+background-size: cover; /* This ensures the image covers the entire slide */
+display: flex;
+align-items: center; /* Center content vertically if needed */
+justify-content: center;
+}
+#d{
+background: url('/static/img/4.jpg') no-repeat center center;
+background-size: cover; /* This ensures the image covers the entire slide */
+display: flex;
+align-items: center; /* Center content vertically if needed */
+justify-content: center;
+}
+#e{
+background: url('/static/img/5.jpg') no-repeat center center;
+background-size: cover; /* This ensures the image covers the entire slide */
+display: flex;
+align-items: center; /* Center content vertically if needed */
+justify-content: center;
+}
+#f{
+background: url('/static/img/6.jpg') no-repeat center center;
+background-size: cover; /* This ensures the image covers the entire slide */
+display: flex;
+align-items: center; /* Center content vertically if needed */
+justify-content: center;
+}
+#g{
+background: url('/static/img/7.jpg') no-repeat center center;
+background-size: cover; /* This ensures the image covers the entire slide */
+display: flex;
+align-items: center; /* Center content vertically if needed */
+justify-content: center;
+}
+#h{
+background: url('/static/img/8.jpg') no-repeat center center;
+background-size: cover; /* This ensures the image covers the entire slide */
+display: flex;
+align-items: center; /* Center content vertically if needed */
+justify-content: center;
+}
+#i{
+background: url('/static/img/9.jpg') no-repeat center center;
+background-size: cover; /* This ensures the image covers the entire slide */
+display: flex;
+align-items: center; /* Center content vertically if needed */
+justify-content: center;
+
+}
+#j{
+background: url('/static/img/10.jpg') no-repeat center center;
+background-size: cover; /* This ensures the image covers the entire slide */
+display: flex;
+align-items: center; /* Center content vertically if needed */
+justify-content: center;
+}
+
+.png1-txt {
+margin: 7px;
+padding-left: 25px;
+padding-right: 25px;
+text-align: justify;
+color: white;
+font-size:30px;
+color: white;
+padding: 1rem;
+background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+border-radius: 8px;
+backdrop-filter: blur(10px); /* Apply blur effect */
+text-transform: capitalize;
+}
+
+.space {
+margin-top: 60px;
+padding-bottom: 60px;
+}
+
+h3{
+color:  white;
+font-size: 50px;
+}
+
+
+
+/* Responsive adjustments for smaller devices */
+@media screen and (max-width: 768px) {
+#png {
+  height: 200px; /* Adjusted for better fit */
+  width: 200px; /* Adjusted for better fit */
+}
+
+.card1 {
+  width: 340px; /* Adjusted for better fit */
+  height: 440px; /* Height is auto for flexible content */
+
+}
+
+}
+
+@media screen and (max-width: 768px) {
+.proj {
+  padding-top: 20px; /* Reduced padding */
+}
+a h3{
+  font-size: 60px;
+}
+
+.proj::after {
+  width: 50%; /* Increased line width for smaller screens */
+}
+
+.swiper-slide {
+  font-size: 16px; /* Slightly smaller font size */
+}
+
+.png-img {
+  width: 70%; /* Increased image size for visibility */
+}
+
+.png1-txt {
+  padding-left: 20px; /* Reduced padding */
+  padding-right: 20px; /* Reduced padding */
+  font-size: 20px;
+
+}
+}
+/* services page end*/
+
+/* about us page start ---- styles in html file ----- */

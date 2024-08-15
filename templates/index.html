@@ -1,0 +1,463 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Santhosh Chodipilli</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="{% static 'index2.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Dancing+Script&family=Gentium+Book+Plus&family=Itim&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lobster&family=Merienda:wght@300&family=Monoton&family=Nunito:wght@200&family=Open+Sans:wght@300;400&family=Playfair+Display&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/car1.jpg" type="image/x-icon">
+    <style>
+
+#about-us {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+#about-us::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/static/img/wheel1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(3px); /* Adjust blur intensity as needed */
+    z-index: -1; /* Place the pseudo-element behind the content */
+}
+.abt{
+  margin-top: 30px;
+  margin-bottom: 23px;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+
+.abt-cnt1{
+  text-transform: none;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+@media (max-width: 768px) {
+    #about-us::before {
+        background-image: url('/static/img/abt.jpg');
+    }
+
+}
+
+#about {
+    position: relative;
+    z-index: 1; /* Ensure content is above the blurred background */
+    color: white; /* Optional: Set text color for better contrast */
+    text-align: center; /* Optional: Center text */
+    padding: 20px; /* Optional: Add padding */
+}
+
+.sub-highlight{
+  display: flex;
+  justify-content: center;
+  margin: 60px;
+  text-align: center;
+}
+
+.png{
+  width: 80px;
+}
+.exp{
+  font-size: 27px;
+  margin-left: 30px;
+  margin-top: 30px;
+  color: #24A88E;
+}
+
+@media (min-width: 768px) {
+
+ .png{
+   width: 100px;
+ }
+ .exp{
+   font-size: 30px;
+   margin-top: 50px;
+ }
+ .abt-cnt1{
+   margin-left: 120px;
+   margin-right: 120px;
+ }
+}
+
+.socio {
+  text-decoration: none;
+  margin-top: -20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 40px;
+  color: black;
+}
+.socio:hover {
+  transform: scale(1.3);
+  transition: all 0.5s;
+
+}
+.social {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.cnt-h1{
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.cnt-h2{
+  display: flex;
+  justify-content: center;
+  margin-top: -20px;
+
+
+}
+.footer {
+  background-color: black;
+  margin-top: 30px;
+  padding: 5px;
+  text-align: center;
+  color: white;
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+.footer-name {
+  color: white;
+  margin-left: 5px;
+  margin-right: 5px;
+
+}
+
+.scroll-to-top {
+  display: none; /* Hide initially */
+  position: fixed;
+  font-family: Ubuntu;
+  bottom: 20px;
+  right: 20px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  text-align: center;
+  line-height: 50px;
+  transition: opacity 0.3s;
+  z-index: 100; /* Ensure it's above other content */
+}
+
+/* Show the button when scrolling down */
+.scroll-to-top.show {
+  display: block;
+}
+
+/* Adjustments for smaller devices */
+@media screen and (max-width: 600px) {
+  .scroll-to-top {
+    width: 40px; /* Smaller width for small devices */
+    height: 40px; /* Smaller height for small devices */
+    font-size: 15px; /* Smaller font size for icon */
+    line-height: 40px; /* Adjust line height for new size */
+    text-align: center;
+
+  }
+}
+
+
+    </style>
+  </head>
+  <body>
+    <div id="Home">
+      <!--nav-->
+      <nav class="navbar">
+        <div class="navbar-container">
+          <a href="#" class="brand-logo">Easy Drive <span style="color: black"></span>⛐</a>
+          <div class="menu-icon" onclick="myFunction()">&#9776;</div>
+          <div class="menu">
+            <ul class="nav-links">
+              <li><a href="#Home">Home</a></li>
+              <li><a href="#services">Services</a></li>
+              {% if user.is_authenticated %}
+              <li><a href="accounts/trainer"  style="color:#527a7a; font-size: 20px" >Trainer</a></li>
+              <li><a href="accounts/logout">Logout</a></li>
+              {% else %}
+              <li><a href="accounts/login">LogiIn</a></li>
+              <li><a href="accounts/register">Register</a></li>
+              {% endif %}
+              <li><a href="#abouts">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div id="menuOverlay">
+          <a href="#" class="closebtn" onclick="closeMenu()">&times;</a>
+          <div class="menu-content">
+            <li><a href="#Home">Home</a></li>
+              <a href="#services">Services</a>
+              {% if user.is_authenticated %}
+              <a href="accounts/trainer" style="color:#527a7a;" class="user" >Trainer</a>
+              <a href="accounts/logout">Logout</a>
+              {% else %}
+              <a href="accounts/login">LogiIn</a>
+              <a href="accounts/register">Register</a>
+              {% endif %}
+              <a href="#abouts">About Us</a>
+              <a href="#contact">Contact</a>
+          </div>
+        </div>
+      </nav>
+      <br>
+    </div>
+
+
+    <section class="car">
+      <div class="home">
+        <h1 class="blurred-text">Easy Drive</h1>
+        <p>Your driving license is one step away.</p>
+      </div>
+    </section>
+
+<div id="services" >
+    <section  class="car2">
+      <div>
+        <h1 class="desc-h1">Services</h1>
+        <p class="descc">We offer you to become a licensed vehicle driver in just 10 days.</p>
+          <div class="some">
+            <li class="desc">✓ Expert Instruction: Learn from certified driving professional.</li>
+            <li class="desc">✓ Affordable Rates: Get the best value for your investment.</li>
+            <li class="desc">✓ Power Steering: Experience modern, easy-to-handle vehicles.</li>
+
+          </div>
+
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div  class="swiper-slide">
+              <div class="gap">
+                <div id="a" class="card1">
+                  <div class="card-frnt" onclick="holdCard(this)">
+                    <a style="text-decoration:none" href="#" target="_blank"><h3 style="text-align:center;">DAY 1</h3></a>
+                    <p  class="png1-txt">Steering</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="gap">
+                <div id="b" class="card1" onclick="holdCard(this)">
+                  <div class="card-frnt">
+                    <a style="text-decoration:none" href="#" target="_blank"><h3 style="text-align:center;">DAY 2</h3></a>
+                    <p  class="png1-txt">Gears</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="gap">
+                <div id="c" class="card1" onclick="holdCard(this)">
+                  <div class="card-frnt">
+                    <a style="text-decoration:none" href="#" target="_blank"><h3 style="text-align:center;">DAY 3</h3></a>
+                    <p  class="png1-txt">Speed breakers</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="gap">
+                <div id="d" class="card1" onclick="holdCard(this)">
+                  <div class="card-frnt">
+                    <a style="text-decoration:none" href="#" target="_blank"><h3 style="text-align:center;">DAY 4</h3></a>
+                    <p  class="png1-txt"> Divider roads</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="gap">
+                <div id="e" class="card1" onclick="holdCard(this)">
+                  <div class="card-frnt">
+                    <a style="text-decoration:none" href="#" target="_blank"><h3 style="text-align:center;">DAY 5</h3></a>
+                    <p  class="png1-txt">Street reverse</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="gap">
+                <div id="f" class="card1" onclick="holdCard(this)">
+                  <div class="card-frnt">
+                    <a style="text-decoration:none" href="#" target="_blank"><h3 style="text-align:center;">DAY 6</h3></a>
+                    <p  class="png1-txt">Street cuttings</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="gap">
+                <div id="g"  class="card1" onclick="holdCard(this)">
+                  <div class="card-frnt">
+                    <a style="text-decoration:none" href="#" target="_blank"><h3 style="text-align:center;">DAY 7</h3></a>
+                    <p  class="png1-txt">up and down movement</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="gap">
+                <div id="h" class="card1" onclick="holdCard(this)">
+                  <div class="card-frnt">
+                    <a style="text-decoration:none" href="#" target="_blank"><h3 style="text-align:center;">DAY 8</h3></a>
+                    <p  class="png1-txt"> Traffic</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="gap">
+                <div id="i" class="card1" onclick="holdCard(this)">
+                  <div class="card-frnt">
+                    <a style="text-decoration:none" href="#" target="_blank"><h3 style="text-align:center;">DAY 9</h3></a>
+                    <p  class="png1-txt">Parking</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="gap">
+                <div id="j" class="card1" onclick="holdCard(this)">
+                  <div class="card-frnt">
+                    <a style="text-decoration:none" href="#" target="_blank"><h3 style="text-align:center;">DAY 10</h3></a>
+                    <p  class="png1-txt">Speed Test</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+</div>
+
+<div id="abouts">
+    <section id="about-us" >
+      <div id="about" >
+        <h1 class="abt" >About us</h1>
+        <div class="abt-cnt">
+        <p class="abt-cnt1">At our driving school, we prioritize your safety and confidence on
+        the road. Our experienced instructors provide personalized lessons tailored
+        to your learning pace. we're here to guide you every step of the way,
+        Our goal is to ensure you not only pass your test but also
+        become a responsible and confident driver.</p>
+        </div>
+          <div class="highlight">
+            <div class="sub-highlight">
+              <img class="png" src="/static/img/icon9.png" alt="image1">
+              <h1 class="exp" >98% Pass rate</h1>
+            </div>
+            <div class="sub-highlight">
+              <img class="png" src="/static/img/icon10.png" alt="image2">
+              <h1 class="exp" >1500+ Students</h1>
+            </div>
+            <div class="sub-highlight">
+              <img class="png" src="/static/img/icon11.png" alt="image3">
+              <h1 class="exp" >12+ Years Exp</h1>
+            </div>
+          </div>
+      </div>
+    </section>
+</div>
+
+<div id="contact">
+    <section  class="contact-us">
+       <div class="contact">
+         <div class="cnt-hs">
+           <h1 class="cnt-h1">contact</h1>
+           <h2 class="cnt-h2"> <a href="/accounts/login" style="margin-right:10px;text-decoration:none;color:#191970">LogIn </a>to view more</h2>
+         </div>
+         <div class="social">
+
+          <a style="color:#1A1110" class="socio" href="https://youtube.com/@easydrivetelugu?si=P3NqBymPwlfKOEsi" target="_blank"> <i class="fa fa-youtube-play"></i>  </a>
+          <a style="color:#1A1110" class="socio" href="https://www.instagram.com/easydrivetelugu?igsh=MTU5cmQ2dTA2cTcxdQ==">   <i class="fa fa-instagram"  target="_blank"></i>  </a>
+          <a style="color:#1A1110;" class="socio" href="https://wa.me/6304299173?text=Hello!" target="_blank">
+          <i class="fa fa-whatsapp"></i></a>
+          <a style="color:#1A1110;" class="socio" href="tel:+7075686831"> <i class="fa fa-phone" target="_blank"></i>  </a>
+
+
+        </div>
+       </div>
+    </section>
+</div>
+
+     <button style="color:#1A1110;" class="scroll-to-top" onclick="scrollToTop()">⬆</button>
+
+    <!--footer-->
+   <footer class="footer">
+   <p>Designed by <span class="footer-name" > Santhosh Rony <a style="color:#007AFF;" href="www.linkedin.com/in/santhosh-chodipilli-631149213"> <i class="fa fa-linkedin" target="_blank"></i>  </a> </span>| &copy; 2024-25. </p>
+   </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="{% static 'index4.js' %}"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 8000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            on: {
+                slideChangeTransitionStart: function () {
+                    // Smooth scroll effect for slide change
+                    const container = document.querySelector('.swiper-wrapper');
+                    container.style.scrollBehavior = 'smooth';
+                },
+                slideChangeTransitionEnd: function () {
+                    // Reset scroll behavior after transition
+                    const container = document.querySelector('.swiper-wrapper');
+                    container.style.scrollBehavior = 'auto';
+                }
+            }
+        });
+    </script>
+  </body>
+</html>
